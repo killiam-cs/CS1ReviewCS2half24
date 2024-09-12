@@ -24,7 +24,7 @@ public class JavaBeansAndBytes {
         isOpen = true;
         yearFounded = 1995;
 
-        System.out.println("Welcome to " + name + "!");
+        System.out.println("Welcome to " + name + "!"); // string concatenation
         if (isOpen) {
             System.out.println("We are open!");
         } else {
@@ -34,12 +34,16 @@ public class JavaBeansAndBytes {
 
         // TODO
         // Update the year founded and print the new yearFounded in a sentence
+        yearFounded = 2000;
+        System.out.println("actually, founded in " + yearFounded);
 
         // Calling methods
         randomDiscount();
+
         // TODO
-        // Add parameter to specialOfTheDay (drink of your choice)
-        specialOfTheDay();
+        // Add string parameter to specialOfTheDay (drink of your choice)
+        specialOfTheDay("hot chocolate");
+
         countCups();
         baristasChoice();
 
@@ -57,13 +61,17 @@ public class JavaBeansAndBytes {
         // TODO
         // Make this method generate a random integer discount (0-30%)
         // and print the result.
+        // Math.random() is decimal 0-1
+        int r = (int) (Math.random()*31);
+        System.out.println("Random discount is " + r + "%!");
     }
 
     // Method with a parameter for the special of the day
-    public void specialOfTheDay() {
+    public void specialOfTheDay(String special) {
         // TODO
         // Make this method accept a parameter representing the day’s special.
         // Print the day's special.
+        System.out.println("Today's special is " + special);
     }
 
     // Method to show loops
@@ -73,13 +81,17 @@ public class JavaBeansAndBytes {
         // TODO
         // Write three different for loops that print the indicated numbers:
 
-        // Print 1 to 5
+        // Print 1 to 5 by ones
+        for (int c = 1; c < 6; c = c + 1) {
+            System.out.print(c + "\n");
+        }
 
+        // Print "2, 5, 8, 11"
+        for (int x = 2; x < 12; x = x + 3) {
+            System.out.print(x + ", ");
+        }
 
-        // Print 2, 5, 8, 11
-
-
-        // Print 8 to 0
+        // Print 8 to 0 by ones
 
     }
 
